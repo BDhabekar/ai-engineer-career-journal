@@ -240,35 +240,6 @@ repo/
 
 ---
 
-## 9. Day 1 launch plan — 2026-06-23
-
-### Main objective
-Set the baseline properly and complete the first clean Iris work session.
-
-### Morning block
-1. Create or open `01-ml-foundations-iris`.
-2. Write a short README skeleton.
-3. Create a notebook for EDA and splitting.
-4. Load Iris.
-5. Verify dataset shape, classes, and balance.
-6. Perform the canonical split for the Iris project.
-7. Train one simple baseline model.
-8. Save one or two useful plots.
-
-### Evening block
-1. Write a one-page note in plain English.
-2. Add the metric results you observed.
-3. Record questions that came up.
-4. Commit the work.
-
-### End-of-day output
-- one notebook,
-- one short markdown note,
-- one commit,
-- one tomorrow-next-step line.
-
----
-
 ## 10. Finish criteria for the full tracker (~138 days)
 By the finish line (~Nov 7, 2026), you should have:
 - a clean GitHub portfolio,

@@ -1,16 +1,20 @@
-# Status Snapshot
-*Overwritten daily — describes "right now," not history (that's `daily/`).*
+# STATUS
 
-**Last updated:** 2026-06-22
+**Date:** 2026-06-23 (Day 1)
+**Phase:** 1 — ML Foundations (Jun 23 – Jul 4)
 
-**Day 1 has not started yet.** Begins 2026-06-23 (Tuesday).
-**First active phase:** Phase 1 — ML Foundations (Days 1–10), Iris as practice dataset.
+**Last few things done:**
+- Environment set up (Python / NumPy / pandas / scikit-learn / Jupyter) — confirmed working
+- `01-ml-foundations-iris` built end-to-end: load → EDA → stratified split → baseline LogisticRegression (0.9667 test accuracy) → confusion matrix / coefficients / KNN comparison → 1 plot
+- Repo committed with README, requirements.txt, notebook, image
+- 1 DSA problem solved: Two Sum (arrays-hashing pattern)
+- `dsa-practice` repo structure + templates proposed (README tracker + `two_sum.py` reference) — commited two_sum.py in repo.
 
-**Last 3 things done:**
-1. Reconciled `roadmap.md` and `memory-log.md` — Day numbers now match the tracker exactly
-2. Restored the DSA/LeetCode parallel-practice track
-3. Simplified the journal repo to a flat structure (this version)
+**Next up (Day 2 — 2026-06-24):**
+- Linear & logistic regression: math + gradient descent
+- Implement linear regression from scratch in NumPy
+- Batch vs. SGD vs. mini-batch gradient descent
+- L1 vs. L2 regularization
+- Deeper pass on accuracy / precision / recall / F1 / ROC-AUC
 
-**Next up:** Day 1 — Iris setup, EDA, canonical split, baseline model (see `docs/roadmap.md` Section 9)
-
-**Open blockers:** none
+**Blockers:** None.

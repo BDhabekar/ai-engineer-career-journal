@@ -87,6 +87,12 @@ Every project should state:
 - Pace: 1 problem/day (light habit, Phases 1–6) → 3–4/day (the tracker's DP/greedy/heaps/backtracking patterns, now spread over more days instead of the tracker's original 7–8/day) → 2–4/day (maintenance, unchanged).
 - List: NeetCode 150 / Blind 75, solved in pattern order. Target ~200–230 problems by the finish line (estimate).
 - Full detail in `roadmap.md` Section 7.
+- **Coding practice lives in its own repo** (e.g. `dsa-practice`), separate from both the journal repo and the numbered ML project repos:
+  - one folder per pattern, named to match the tracker's Day 57–65 groupings (`arrays-hashing`, `two-pointers`, `sliding-window`, `stack`, `binary-search`, `linked-list`, `trees-bst`, `graphs`, `dp-1d`, `dp-2d-greedy-intervals`, `heaps-backtracking`),
+  - one file per problem, each starting with a header comment: problem name, link, pattern, difficulty, approach (1-2 lines), time/space complexity,
+  - a root `README.md` acting as a progress-tracker table (date, problem, pattern, difficulty, link, complexity),
+  - commit messages short and specific, e.g. `dsa: two-sum (arrays-hashing)`, one commit per problem (or a small same-sitting batch).
+  - Daily journal notes stay high-level about DSA ("solved 1 problem") — the coding repo's own README carries the per-problem detail.
 
 ---
 
@@ -118,13 +124,13 @@ Every project should state:
 
 ## 5. Current status
 - Official reset: previous Iris exploration work is treated as warm-up.
-- **Day 1 has not started yet.**
-- Day 1 begins on **2026-06-23**.
-- First active phase: **Phase 1 — ML Foundations** (Tracker Days 1–10, calendar Jun 23 – Jul 4), Iris as the practice dataset.
+- **Day 1 complete (2026-06-23).** Environment confirmed working; `01-ml-foundations-iris` built end-to-end (load → EDA → stratified split → baseline LogisticRegression, 0.9667 test accuracy → confusion matrix / coefficients / KNN comparison → 1 plot) and committed with README, requirements.txt, notebook, and image. 1 DSA problem solved (Two Sum, arrays-hashing).
+- `dsa-practice` repo structure and templates (README tracker + solution-file convention) proposed today — first commit (Two Sum) done.
+- Current phase: **Phase 1 — ML Foundations** (Tracker Days 1–10, calendar Jun 23 – Jul 4), Iris as the practice dataset. On track; Day 2 is next.
 - Current priority:
-  1. establish a sustainable daily routine,
-  2. complete Day 1 cleanly,
-  3. keep the repo structure simple,
+  1. keep the daily routine sustainable,
+  2. push commits consistently across all three repos (journal, ML project, dsa-practice),
+  3. keep repo structures simple and stable,
   4. avoid burnout.
 
 ---
