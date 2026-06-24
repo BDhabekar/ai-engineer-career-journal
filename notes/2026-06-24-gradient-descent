@@ -1,0 +1,291 @@
+# Day 003 - Gradient Descent: Batch vs SGD vs Mini-Batch
+
+**Date: 18 June 2026**
+
+---
+
+# What is Gradient Descent?
+
+Gradient Descent is an optimization algorithm used to minimize the cost (loss) function by iteratively updating the model parameters in the direction that reduces the loss.
+
+The basic idea is similar to standing on a hill and repeatedly taking steps downhill until reaching the lowest point.
+
+---
+
+## General Update Rule
+
+For a parameter (w):
+
+```text
+w = w - α × ∂J/∂w
+```
+
+where:
+
+* **J(w)** = Cost function
+* **∂J/∂w** = Gradient (slope)
+* **α** = Learning Rate
+
+---
+
+## Working of Gradient Descent
+
+1. Initialize parameters randomly.
+2. Compute predictions.
+3. Calculate loss.
+4. Compute gradients.
+5. Update parameters.
+6. Repeat until convergence.
+
+---
+
+# Batch Gradient Descent
+
+Batch Gradient Descent computes the gradient using the entire training dataset before updating the parameters.
+
+### Algorithm
+
+```python
+for epoch in epochs:
+    predictions = model(X_train)
+    loss = compute_loss(predictions, y_train)
+    gradients = compute_gradient(loss)
+    update_weights()
+```
+
+---
+
+## Example
+
+Dataset:
+
+```text
+1,000,000 samples
+```
+
+Epoch 1:
+
+```text
+Use all 1,000,000 samples
+↓
+Compute gradient
+↓
+Update weights once
+```
+
+Epoch 2:
+
+```text
+Use all 1,000,000 samples
+↓
+Update weights once
+```
+
+---
+
+## Advantages
+
+* Stable convergence.
+* Smooth loss curve.
+* Deterministic updates.
+
+## Disadvantages
+
+* Slow for large datasets.
+* High memory requirements.
+* Only one update per epoch.
+
+---
+
+# Stochastic Gradient Descent (SGD)
+
+Stochastic Gradient Descent updates the parameters after processing each training example.
+
+### Algorithm
+
+```python
+for epoch in epochs:
+    shuffle(data)
+
+    for x, y in dataset:
+        prediction = model(x)
+        gradient = compute_gradient()
+        update_weights()
+```
+
+---
+
+## Example
+
+Dataset:
+
+```text
+1,000,000 samples
+```
+
+Training:
+
+```text
+Sample 1  → Update
+Sample 2  → Update
+Sample 3  → Update
+...
+Sample 1,000,000 → Update
+```
+
+Thus:
+
+```text
+1 epoch = 1,000,000 updates
+```
+
+---
+
+## Advantages
+
+* Low memory usage.
+* Faster updates.
+* Can escape local minima.
+* Suitable for online learning.
+
+## Disadvantages
+
+* Very noisy updates.
+* Loss fluctuates heavily.
+* Convergence is less stable.
+
+---
+
+# Mini-Batch Gradient Descent
+
+Mini-Batch Gradient Descent is a compromise between Batch Gradient Descent and SGD.
+
+Instead of using:
+
+* Entire dataset (Batch GD)
+* One sample (SGD)
+
+it uses a small batch:
+
+```text
+Batch Size = 32, 64, 128, 256
+```
+
+---
+
+## Example
+
+Dataset:
+
+```text
+1,000,000 samples
+Batch Size = 100
+```
+
+Updates per epoch:
+
+```text
+1,000,000 / 100 = 10,000 updates
+```
+
+Training:
+
+```text
+100 samples → Update
+
+Next 100 samples → Update
+
+Next 100 samples → Update
+```
+
+---
+
+## Algorithm
+
+```python
+for epoch in epochs:
+    shuffle(data)
+
+    for batch in mini_batches:
+        predictions = model(batch)
+        gradients = compute_gradient()
+        update_weights()
+```
+
+---
+
+## Advantages
+
+* Faster than Batch GD.
+* More stable than SGD.
+* Memory efficient.
+* GPU friendly.
+* Parallelizable.
+
+## Disadvantages
+
+* Requires selecting batch size.
+* Too small a batch behaves like SGD.
+* Too large a batch behaves like Batch GD.
+
+---
+
+# Comparison
+
+| Feature               | Batch GD       | SGD   | Mini-Batch GD  |
+| --------------------- | -------------- | ----- | -------------- |
+| Samples per Update    | Entire Dataset | 1     | Small Batch    |
+| Updates per Epoch     | 1              | N     | N / Batch Size |
+| Memory Usage          | High           | Low   | Moderate       |
+| Speed                 | Slow           | Fast  | Fast           |
+| Convergence           | Smooth         | Noisy | Stable         |
+| GPU Friendly          | Moderate       | Poor  | Excellent      |
+| Used in Deep Learning | Rare           | Rare  | Almost Always  |
+
+---
+
+# Why Mini-Batch Gradient Descent is Preferred
+
+Mini-Batch Gradient Descent combines the advantages of Batch GD and SGD.
+
+It provides:
+
+* Faster convergence.
+* Lower memory requirements.
+* Stable updates.
+* Efficient GPU utilization.
+* Better scalability for large datasets.
+
+Therefore, almost all modern deep learning frameworks use Mini-Batch Gradient Descent.
+
+Common batch sizes:
+
+```text
+32
+64
+128
+256
+512
+```
+
+---
+
+# Modern Optimizers Built on Gradient Descent
+
+Modern optimizers are extensions of Mini-Batch Gradient Descent.
+
+Examples:
+
+* Momentum
+* RMSProp
+* Adam
+* AdamW
+* AdaGrad
+
+These optimizers improve convergence speed and training stability.
+
+---
+
+# Interview Answer (1 Minute)
+
+> Gradient descent is an optimization algorithm used to minimize the loss function by iteratively updating model parameters in the direction opposite to the gradient. Batch Gradient Descent uses the entire dataset for each update, giving stable convergence but requiring high computation. Stochastic Gradient Descent updates after every sample, making it faster but noisier. Mini-Batch Gradient Descent updates using small batches of data and provides a balance between speed and stability. Because it is memory efficient and GPU friendly, Mini-Batch Gradient Descent is the most widely used approach in modern machine learning and deep learning.

@@ -30,6 +30,8 @@ The goal is to find a model complex enough to capture the true pattern but simpl
 | Generalization  | Poor      | Poor          |
 | Problem         | Underfitting | Overfitting |
 
+Bias-variance: `Total Error ≈ Bias² + Variance + Irreducible noise`
+
 ---
 
 ## How is this Trade-off Related to Overfitting and Underfitting?
