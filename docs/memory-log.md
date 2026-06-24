@@ -90,6 +90,7 @@ Every project should state:
 - **Coding practice lives in its own repo** (e.g. `dsa-practice`), separate from both the journal repo and the numbered ML project repos:
   - one folder per pattern, named to match the tracker's Day 57–65 groupings (`arrays-hashing`, `two-pointers`, `sliding-window`, `stack`, `binary-search`, `linked-list`, `trees-bst`, `graphs`, `dp-1d`, `dp-2d-greedy-intervals`, `heaps-backtracking`),
   - one file per problem, each starting with a header comment: problem name, link, pattern, difficulty, approach (1-2 lines), time/space complexity,
+  - when exploring multiple solution approaches to the *same* problem is itself the learning objective (e.g. a hashmap vs. fixed-array space tradeoff), those approaches may live as multiple classes inside that one file — still one file per **problem**, not one file per approach,
   - a root `README.md` acting as a progress-tracker table (date, problem, pattern, difficulty, link, complexity),
   - commit messages short and specific, e.g. `dsa: two-sum (arrays-hashing)`, one commit per problem (or a small same-sitting batch).
   - Daily journal notes stay high-level about DSA ("solved 1 problem") — the coding repo's own README carries the per-problem detail.
@@ -125,8 +126,9 @@ Every project should state:
 ## 5. Current status
 - Official reset: previous Iris exploration work is treated as warm-up.
 - **Day 1 complete (2026-06-23).** Environment confirmed working; `01-ml-foundations-iris` built end-to-end (load → EDA → stratified split → baseline LogisticRegression, 0.9667 test accuracy → confusion matrix / coefficients / KNN comparison → 1 plot) and committed with README, requirements.txt, notebook, and image. 1 DSA problem solved (Two Sum, arrays-hashing).
-- `dsa-practice` repo structure and templates (README tracker + solution-file convention) proposed today — first commit (Two Sum) done.
-- Current phase: **Phase 1 — ML Foundations** (Tracker Days 1–10, calendar Jun 23 – Jul 4), Iris as the practice dataset. On track; Day 2 is next.
+- **Day 2 complete (2026-06-24).** Linear & logistic regression: built `LinearRegressionScratch` (batch gradient descent, NumPy) on synthetic data, verified against the closed-form normal equation and `sklearn.LinearRegression` (all three agreed to 4 decimals). Compared batch/mini-batch/SGD convergence noise. Demonstrated L1 vs. L2 regularization (Lasso correctly zeroed 6/10 known-zero synthetic weights). Re-evaluated Day 1's exact Iris model with precision/recall/F1/ROC-AUC (macro AUC = 1.0), not just accuracy. Notebook `02_linear_regression_scratch.ipynb` + 4 plots built and executed clean, added as a second notebook inside `01-ml-foundations-iris` (not a new repo — small foundational exercise, kept consolidated). 1 DSA problem solved (Valid Anagram, arrays-hashing) — hashmap + fixed-array approaches committed to file; a one-pass hashmap variant was discussed for understanding but not added to the committed file.
+- `dsa-practice` repo: two problems solved so far (Two Sum, Valid Anagram), first-commit templates holding.
+- Current phase: **Phase 1 — ML Foundations** (Tracker Days 1–10, calendar Jun 23 – Jul 4), Iris as the practice dataset. On track; Day 3 is next.
 - Current priority:
   1. keep the daily routine sustainable,
   2. push commits consistently across all three repos (journal, ML project, dsa-practice),

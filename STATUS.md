@@ -1,20 +1,18 @@
 # STATUS
 
-**Date:** 2026-06-23 (Day 1)
-**Phase:** 1 — ML Foundations (Jun 23 – Jul 4)
+**Phase:** 1 — ML Foundations (Tracker Days 1–10 · Calendar Jun 23 – Jul 4, 2026)
+**Today:** Day 2 complete (2026-06-24)
+**Next up:** Day 3 — Decision trees, random forests, gradient boosting (Project 2: tabular ML + feature engineering + XGBoost)
 
 **Last few things done:**
-- Environment set up (Python / NumPy / pandas / scikit-learn / Jupyter) — confirmed working
-- `01-ml-foundations-iris` built end-to-end: load → EDA → stratified split → baseline LogisticRegression (0.9667 test accuracy) → confusion matrix / coefficients / KNN comparison → 1 plot
-- Repo committed with README, requirements.txt, notebook, image
-- 1 DSA problem solved: Two Sum (arrays-hashing pattern)
-- `dsa-practice` repo structure + templates proposed (README tracker + `two_sum.py` reference) — commited two_sum.py in repo.
+- Linear regression from scratch (NumPy, batch gradient descent) — verified against the closed-form normal equation and `sklearn.LinearRegression`.
+- Batch vs. mini-batch vs. SGD convergence-noise comparison, same data and learning rate.
+- L1 vs. L2 regularization demo — Lasso correctly zeroed 6 of 10 known-zero synthetic weights.
+- Precision/recall/F1/ROC-AUC applied to Day 1's exact Iris model (macro ROC-AUC = 1.0).
+- DSA: Valid Anagram solved (arrays-hashing) — hashmap + fixed-array approaches in the committed file.
 
-**Next up (Day 2 — 2026-06-24):**
-- Linear & logistic regression: math + gradient descent
-- Implement linear regression from scratch in NumPy
-- Batch vs. SGD vs. mini-batch gradient descent
-- L1 vs. L2 regularization
-- Deeper pass on accuracy / precision / recall / F1 / ROC-AUC
+**Blockers:** none.
 
-**Blockers:** None.
+**Repos touched today:**
+- `01-ml-foundations-iris` — new notebook (`02_linear_regression_scratch.ipynb`) + 4 images.
+- `dsa-practice` — `arrays-hashing/valid-anagram.py`.
