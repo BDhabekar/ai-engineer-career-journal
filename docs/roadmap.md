@@ -16,6 +16,7 @@ This does trim the buffer before the Jan 2027 interview-readiness target from ~2
 4. Keep documentation small and useful.
 5. Ship fewer repos, but make them good.
 6. Trust the daily log and commit history over memory.
+7. Prefer simple, readable code and plain-English explanations over clever-but-dense ones — for example, structuring from-scratch model parameters as separate named attributes (`weights`, `bias`) rather than one combined vector. (Locked in on Day 2 — full detail in `memory-log.md` Section 3.)
 
 ---
 
@@ -70,6 +71,7 @@ Use the same rhythm most days.
 5. Commit once with a clear message.
 6. Write tomorrow's first task in one line.
 7. When the chat ends with **"End of day"**, use it as the handoff signal to close the day, update the next-day scope, and record the actual results before starting anything new.
+8. The "End of day" handoff returns a fixed set of files to commit: the dated daily note, updated `memory-log.md`, updated `roadmap.md`, updated `STATUS.md`, the active project's updated `README.md`, and — on any day you solved a DSA problem — the solution file (Section 7 template) plus the updated `dsa-practice` README row. *(Set expanded 2026-06-25 to also include `roadmap.md`, the project README, and the DSA solution file.)*
 
 ---
 
@@ -95,7 +97,7 @@ Commit only useful, reproducible work.
 
 Typical commit contents:
 - notebook or script changes
-- README updates
+- README updates (the active project's `README.md` is refreshed every day at "End of day" so it never lags behind the code — convention added 2026-06-25)
 - exported plots that matter
 - requirements changes if a new package is truly needed
 - small data artifacts only if they are meant for the repo
@@ -178,7 +180,7 @@ Commit message pattern:
 ### Phase 12 — Final Interviews, Offers & Wrap-Up · Tracker Days 111–120 · Calendar: Oct 28 – Nov 7, 2026 (11 days)
 **Topics:** same maintenance rotation continues, plus negotiation and offer-evaluation prep, plus a concrete ongoing-learning plan for after the finish line.
 **Deliverables:** final portfolio confirmation, a self-certification across all four tracks, a written post-finish learning plan.
-**Exit criteria:** job-ready, with a clear story for why you're moving into AI engineering — and a plan for what you keep learning next.
+**Exit criteria:** job-ready, with a clear story for why you are moving into AI engineering — and a plan for what you keep learning next.
 
 ---
 
@@ -192,6 +194,23 @@ Commit message pattern:
 | Maintenance / active interviewing | Phases 9–12 (Sep 27 – Nov 7) | **2–4 problems/day**, timed, mixed | Unchanged — this pace was never the problem |
 
 List: NeetCode 150 (or Blind 75 first), solved roughly in the pattern order above. Rough total by the finish line: **~200–230 problems** *(estimate — total rises slightly since the timeline is longer, even though the daily peak is lower)*, several patterns repeated 2–3×.
+
+**Solution-file convention (`dsa-practice` repo).** One folder per pattern, one file per problem, each file starting with this fixed header comment block, then the code (locked 2026-06-25; canonical copy in `memory-log.md` Section 3):
+
+```python
+"""
+Problem: <name>
+Link: <url>
+Pattern: <pattern>
+Difficulty: <Easy/Medium/Hard>
+Approach: <1-2 lines — the key idea>
+Time: O(?)   Space: O(?)
+"""
+
+# solution code below
+```
+
+On a day you solved a problem, the solution file (in the right pattern folder) and the `dsa-practice` README progress-table row are handed back at "End of day" alongside the usual closeout files.
 
 ---
 
