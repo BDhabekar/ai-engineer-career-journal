@@ -1,21 +1,32 @@
-# STATUS — right now
+# STATUS
 
-**Phase:** 1 — ML Foundations (Tracker Days 1–10 · calendar Jun 23 – Jul 4)
-**Last completed:** Day 3 (2026-06-25) — decision trees, ensembles, cross-validation
+**Last updated:** 2026-06-26 (Day 4)
+**Phase:** 1 — ML Foundations (Jun 23 – Jul 4)
+**Interview-readiness target:** January 2027
 
-**Recently done**
-- Day 1 (2026-06-23): Iris baseline — `01-ml-foundations-iris`.
-- Day 2 (2026-06-24): linear/logistic regression from scratch — 2nd notebook in the Iris repo.
-- Day 3 (2026-06-25): trees → random forest → gradient boosting → XGBoost on Titanic — `02-tabular-ml-project`; cross-validation now in place.
+## Where I am
+- Tracker content Days 1–4 complete (ML foundations: baselines, regression from scratch, trees/ensembles, unsupervised).
+- On the ~138-day extended calendar, comfortably on pace.
 
-**Active repos**
-- `ai-engineer-career-journal` (this repo)
-- `01-ml-foundations-iris` (Day 1–2)
-- `02-tabular-ml-project` (Day 3 — current)
-- `dsa-practice` (3 problems: Two Sum, Valid Anagram, Group Anagrams — all arrays-hashing)
+## Active project
+- **Project 3 — `03-customer-segmentation`** (k-means + PCA). Day 4 complete.
+- Previous projects complete with parked next-steps:
+  - **Project 1 — `01-ml-foundations-iris`** (Days 1–2). Parked: scaling pipeline (Day 5).
+  - **Project 2 — `02-tabular-ml-project`** (Day 3, Titanic). Parked: feature engineering, reusable Pipeline, SMOTE/`scale_pos_weight` deep-dive — **reopens Day 5**.
 
-**Next up:** Day 4 — unsupervised learning (k-means, hierarchical, PCA, t-SNE/UMAP); customer-segmentation project.
+## Projects status
+| # | Repo | Topic | Status |
+|---|---|---|---|
+| 1 | `01-ml-foundations-iris` | Baselines, linear regression from scratch | Complete (Day-5 scaling parked) |
+| 2 | `02-tabular-ml-project` | Trees, ensembles, CV, imbalance | Complete (Day-5 items parked, reopens) |
+| 3 | `03-customer-segmentation` | k-means clustering + PCA | **Active — Day 4 complete** |
 
-**Blockers:** none.
+## DSA
+- Platform: NeetCode. Repo: `dsa-practice`.
+- Solved: Two Sum, Valid Anagram, Group Anagrams (sorted-key + count-key), **Plus One** (carry-walk primary + int-roundtrip alt).
+- Pace: gentle now (~1/day); escalates to 3–4/day in Phase 7.
 
-**Parked:** Day-5 imbalance deep-dive — SMOTE + `scale_pos_weight` in an `imblearn` pipeline + threshold tuning on a genuinely skewed dataset (once Pipelines are in hand).
+## Next session (Day 5)
+- Feature engineering / encoding / scaling / missing-data; reusable `Pipeline` + `ColumnTransformer`.
+- Reopen Project 2 for the deferred imbalance deep-dive.
+- One DSA problem (arrays-hashing or two-pointers).

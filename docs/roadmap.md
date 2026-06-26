@@ -124,6 +124,8 @@ Commit message pattern:
 **Deliverables:** Iris/Titanic classifier, tabular XGBoost project, k-means segmentation, reusable sklearn pipeline, NumPy MLP from scratch, CIFAR-10 CNN, LSTM sentiment model.
 **Exit criteria:** explain the full ML project lifecycle and bias-variance tradeoff; train and compare at least 3 model families end to end.
 
+> **Current cursor (2026-06-26):** Tracker Days 1–4 done — baselines, regression-from-scratch, trees/ensembles, and k-means/PCA segmentation (Project 3). **Next: Tracker Day 5** — feature engineering, encoding, scaling, missing-data handling, and a reusable `sklearn` `Pipeline` + `ColumnTransformer`. Project 2 (`02-tabular-ml-project`) reopens for the deferred SMOTE / `scale_pos_weight` imbalance deep-dive and feature engineering. Project 1 may briefly reopen to add its scaling pipeline.
+
 ### Phase 2 — Deep Learning, Transformers & RAG · Tracker Days 11–20 · Calendar: Jul 5 – Jul 17, 2026 (13 days)
 **Topics:** self-attention/Transformer architecture, nanoGPT, pretrain vs fine-tune vs RLHF/DPO/LoRA, BPE tokenization, prompt engineering, LangChain memory, embeddings & semantic search, RAG architecture, advanced RAG (reranking, hybrid search).
 **Deliverables:** self-attention from scratch, nanoGPT on tiny-shakespeare, LoRA fine-tune, BPE tokenizer, structured-output extractor, chatbot with memory, semantic search engine, end-to-end RAG app, RAG + reranker/hybrid upgrade.
