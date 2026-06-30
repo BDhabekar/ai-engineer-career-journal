@@ -1,32 +1,23 @@
-# STATUS
+# STATUS — right now
 
-**Last updated:** 2026-06-26 (Day 4)
-**Phase:** 1 — ML Foundations (Jun 23 – Jul 4)
-**Interview-readiness target:** January 2027
+**Updated:** 2026-06-30
+**Phase:** 1 — ML Foundations (Tracker Days 1–10 · calendar Jun 23 – Jul 4)
+**Tracker Days done:** 1–5
 
-## Where I am
-- Tracker content Days 1–4 complete (ML foundations: baselines, regression from scratch, trees/ensembles, unsupervised).
-- On the ~138-day extended calendar, comfortably on pace.
+## Last few things done
+- **Day 5 (2026-06-30):** reusable leak-free `sklearn` `Pipeline` + `ColumnTransformer` on Titanic — median/most-frequent imputation with a missing-`age` indicator, `StandardScaler`, `OneHotEncoder(handle_unknown="ignore")`, plus `family_size`/`is_alone`. Four-model CV reproduced the Day-3 baseline (~0.80–0.82); engineered features were an honest no-op. New notebook in `02-tabular-ml-project`.
+- **Day 4 (2026-06-26):** `03-customer-segmentation` — k-means + PCA, k=3 chosen over k=2 with documented reasoning; cluster 2 = 98.6% Horeca.
+- **Day 3 (2026-06-25):** `02-tabular-ml-project` — trees/ensembles, 5-fold CV, mild-imbalance handling.
 
-## Active project
-- **Project 3 — `03-customer-segmentation`** (k-means + PCA). Day 4 complete.
-- Previous projects complete with parked next-steps:
-  - **Project 1 — `01-ml-foundations-iris`** (Days 1–2). Parked: scaling pipeline (Day 5).
-  - **Project 2 — `02-tabular-ml-project`** (Day 3, Titanic). Parked: feature engineering, reusable Pipeline, SMOTE/`scale_pos_weight` deep-dive — **reopens Day 5**.
+## Next up
+1. **SMOTE / `scale_pos_weight` class-imbalance deep-dive** (deferred from Day 4) — reopen `02-tabular-ml-project` on a genuinely skewed dataset: `scale_pos_weight` vs SMOTE-in-CV `imblearn` pipeline vs threshold tuning, side by side.
+2. **Tracker Day 6** — neural-network fundamentals + a NumPy MLP from scratch.
 
-## Projects status
-| # | Repo | Topic | Status |
-|---|---|---|---|
-| 1 | `01-ml-foundations-iris` | Baselines, linear regression from scratch | Complete (Day-5 scaling parked) |
-| 2 | `02-tabular-ml-project` | Trees, ensembles, CV, imbalance | Complete (Day-5 items parked, reopens) |
-| 3 | `03-customer-segmentation` | k-means clustering + PCA | **Active — Day 4 complete** |
+## Low-priority backlog
+- Optional: retrofit Project 1 (`01-ml-foundations-iris`) with a scaling pipeline (~30 min).
 
-## DSA
-- Platform: NeetCode. Repo: `dsa-practice`.
-- Solved: Two Sum, Valid Anagram, Group Anagrams (sorted-key + count-key), **Plus One** (carry-walk primary + int-roundtrip alt).
-- Pace: gentle now (~1/day); escalates to 3–4/day in Phase 7.
+## Blockers
+- None.
 
-## Next session (Day 5)
-- Feature engineering / encoding / scaling / missing-data; reusable `Pipeline` + `ColumnTransformer`.
-- Reopen Project 2 for the deferred imbalance deep-dive.
-- One DSA problem (arrays-hashing or two-pointers).
+## Repos
+- `ai-engineer-career-journal` (journal) · `01-ml-foundations-iris` · `02-tabular-ml-project` (active) · `03-customer-segmentation` · `dsa-practice` (4 problems, all arrays-hashing).
